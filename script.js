@@ -1,12 +1,5 @@
 const box = document.querySelector('#box');
 
-box.style.display = "grid";
-box.style.gridTemplateColumns = "repeat(3, 1fr)";
-
-if(window.innerWidth <= 400){
-    box.style.gridTemplateColumns = "repeat(1, 1fr)";
-}
-
 async function getCountries(){
     const countries = await fetch("https://restcountries.com/v3.1/all");
     const countriesName = await countries.json();
